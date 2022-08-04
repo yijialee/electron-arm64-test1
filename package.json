@@ -1,0 +1,38 @@
+{
+  "name": "helloelectron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "electron . --no-sandbox arguemnt",
+    "build": "electron-builder --linux  ",
+    "buildarm": "electron-builder --linux --arm64 "
+  },
+  "author": {
+    "name": "lee",
+    "email": "yijia_lee@qq.com"
+  },
+  "license": "MIT",
+"build":{"linux": {
+    "target": [
+      "rpm"
+    ],
+    "icon": "./build/logo.png",
+    "category": "Office"
+  },
+  "rpm": {
+    "fpm": [
+      "--architecture=aarch64" 
+    ]
+  }},
+  
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.57",
+    "electron": "v20.0.0",
+    "electron-builder": "^23.3.3"
+  },
+  "dependencies": {
+    
+  }
+}
